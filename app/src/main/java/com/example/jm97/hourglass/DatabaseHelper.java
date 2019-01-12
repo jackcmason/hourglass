@@ -12,12 +12,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_2 = "ACTIVITY";
     public static final String COL_3 = "CATAGORY";
     public static final String COL_4 = "STARTTIME";
-    public static final String COL_4 = "ENDTIME";
+    public static final String COL_5 = "ENDTIME";
 
-    public DatabaseHelper(@androidx.annotation.Nullable Context context,
-                          @androidx.annotation.Nullable String name,
-                          @androidx.annotation.Nullable SQLiteDatabase.CursorFactory factory,
-                          int version) {
+    public DatabaseHelper(Context context) { //@androidx.annotation.Nullable ??
 
         super(context, DATABASE_NAME, null, 1);
         SQLiteDatabase db =  this.getWritableDatabase();
